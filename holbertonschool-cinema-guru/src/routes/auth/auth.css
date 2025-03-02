@@ -1,27 +1,29 @@
 .auth-container {
+    display: flex;
+    flex-direction: column;
     width: 400px;
-    margin: 100px auto;
+    margin: 200px auto;
     text-align: center;
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
+
+    background: #ffffff;
+    padding: 0px;
+    
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    color: white;
+    color: rgb(109, 109, 109);
 }
 
 .auth-header {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 5px;
     background: red;
-    border-radius: 8px 8px 0 0;
 }
 
 .auth-header button {
     flex: 1;
     padding: 10px;
     border: none;
-    background: darkred;
+    background: rgba(139, 0, 0, 0.476);
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -29,25 +31,51 @@
 }
 
 .auth-header button.active {
-    background: white;
-    color: red;
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.402);
 }
 
 .auth-form {
     padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
 
 .auth-form input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #444;
-    background: #333;
-    color: white;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: #333;
+    border-bottom: 1px solid #8b0000;
 }
 
 .auth-form button {
-    width: 100%;
+    display: block;
+    width: auto;
     padding: 10px;
     background: red;
     border: none;
@@ -55,8 +83,14 @@
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    align-self: flex-end;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .auth-form button:hover {
-    background: darkred;
+    background: #ffffff;
+    color: red;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }

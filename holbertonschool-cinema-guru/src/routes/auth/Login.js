@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faLock, faSignInAlt } from "@fortawesome/free-solid-svg-icons"; // ✅ Correct import
 import "./auth.css";
 import axios from "axios";
 

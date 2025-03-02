@@ -25,6 +25,9 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
                 </button>
             </div>
             <div className="auth-form">
+                {/* Add dynamic title */}
+                <h2 className="auth-title">{_switch ? "Sign in with your account" : "Create a new account"}</h2>
+
                 {_switch ? (
                     <Login 
                         username={username} 
