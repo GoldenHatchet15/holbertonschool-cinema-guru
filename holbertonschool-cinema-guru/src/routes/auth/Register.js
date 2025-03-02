@@ -1,25 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock,faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons"; 
 import "./auth.css";
-import axios from "axios";
 
 const Register = ({ username, password, setUsername, setPassword }) => {
-    const handleRegister = async (e) => {
-        e.preventDefault();
-        try {
-            await axios.post("http://localhost:8000/api/auth/register", {
-                username,
-                password,
-            });
-            alert("Account created! Please log in.");
-        } catch (error) {
-            alert("Registration failed! Try again.");
-        }
-    };
-
     return (
-        <form onSubmit={handleRegister} className="auth-form">
+        <div className="register-form">
             <div>
                 <FontAwesomeIcon icon={faUser} />
                 <input
@@ -40,10 +26,7 @@ const Register = ({ username, password, setUsername, setPassword }) => {
                     required
                 />
             </div>
-            <button type="submit">
-                <FontAwesomeIcon icon={faUserPlus} /> Sign Up
-            </button>
-        </form>
+        </div>
     );
 };
 

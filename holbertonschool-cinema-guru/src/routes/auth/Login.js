@@ -1,29 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock, faSignInAlt } from "@fortawesome/free-solid-svg-icons"; // ✅ Correct import
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons"; // ✅ Correct import
 import "./auth.css";
-import axios from "axios";
 
-const Login = ({ username, password, setUsername, setPassword, setIsLoggedIn, setUserUsername }) => {
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post("http://localhost:8000/api/auth/login", {
-                username,
-                password,
-            });
-            if (response.data.token) {
-                localStorage.setItem("accessToken", response.data.token);
-                setIsLoggedIn(true);
-                setUserUsername(username);
-            }
-        } catch (error) {
-            alert("Login failed! Check your credentials.");
-        }
-    };
-
+const Login = ({ username, password, setUsername, setPassword }) => {
     return (
-        <form onSubmit={handleLogin} className="auth-form">
+        <div className="login-form">
             <div>
                 <FontAwesomeIcon icon={faUser} />
                 <input
@@ -44,10 +26,7 @@ const Login = ({ username, password, setUsername, setPassword, setIsLoggedIn, se
                     required
                 />
             </div>
-            <button type="submit">
-                <FontAwesomeIcon icon={faSignInAlt} /> Sign In
-            </button>
-        </form>
+        </div>
     );
 };
 

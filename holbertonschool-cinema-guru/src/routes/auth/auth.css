@@ -1,12 +1,14 @@
 .auth-container {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin: 200px auto;
+    position: absolute;
+    width: 450px;
+    height: 361px;
+    left: 735px;
+    top: 292px;
+    /*margin: 200px auto;*/
     text-align: center;
 
     background: #ffffff;
-    padding: 0px;
+    
     
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: rgb(109, 109, 109);
@@ -37,7 +39,7 @@
 }
 
 .auth-form {
-    padding: 20px;
+    padding: 40px;
     animation: fadeIn 0.3s ease-in-out;
     display: flex;
     flex-direction: column;

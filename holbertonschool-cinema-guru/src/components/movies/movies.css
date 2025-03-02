@@ -1,0 +1,139 @@
+.movie-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Softer shadow */
+    color: white;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ✅ Movie Image */
+.movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ✅ Movie Title */
+.movie-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* ✅ Movie Description */
+.movie-card p {
+    font-size: 14px;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+/* ✅ Action Buttons */
+.movie-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ✅ Favorite & Watch Later Icons */
+.movie-actions .favorited {
+    color: gold;
+}
+
+.movie-actions .watch-later {
+    color: lightblue;
+}
+
+
+.genre-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre-tags .tag {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.genre-tags .tag.selected {
+    background: darkred;
+}
+
+/* ✅ Style the Tag List in Filter Section */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    list-style: none; /* ❌ Removes bullets */
+    justify-content: center; /* Center aligns the tags */
+}
+
+/* ✅ Style Individual Tags */
+/* ✅ Main Filter Container */
+.filter-container {
+    display: flex;
+    justify-content: space-between; /* Left side & right side */
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* ✅ Left Section: Search, Inputs, Sorting */
+.filter-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ✅ Right Section: Genre Tags */
+.filter-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end; /* Pushes tags to the right */
+    /* eliminate list dot*/
+    list-style: none;
+}
+
+/* ✅ Improve Input & Select Styling */
+.filter-left input,
+.filter-left select {
+    padding: 8px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+    border-radius: 4px;
+}
+
+/* ✅ Individual Tags */
+.tag {
+    background: #222;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;  /* Rounded shape */
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    text-transform: capitalize;
+    border: 1px solid red; /* Red outline */
+}
+
+/* ✅ Selected Tag */
+.tag.selected {
+    background: red;
+    color: white;
+    border: none;
+}
